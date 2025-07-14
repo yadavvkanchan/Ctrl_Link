@@ -106,11 +106,6 @@ NEXTAUTH_URL=http://localhost:3000
 
 ---
 
-## 📸 Screenshots
-
-_(Add screenshots of your UI here if needed)_
-
----
 
 ## 🙌 Contributing
 
@@ -124,7 +119,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ---
 
-Happy coding! 🚀
 
 
 
