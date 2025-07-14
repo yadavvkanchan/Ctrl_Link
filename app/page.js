@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
 import { useSession, signIn, signOut } from 'next-auth/react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HomePage() {
   const { data: session } = useSession();
@@ -24,7 +26,7 @@ export default function HomePage() {
           {session ? (
             <>
               <div className="mb-6">
-                <img
+                <Image
                   src={session.user.image}
                   alt="Profile"
                   className="w-16 h-16 rounded-full mx-auto mb-2"
@@ -33,11 +35,11 @@ export default function HomePage() {
                 <p className="text-gray-400">{session.user.email}</p>
               </div>
               <div className="flex justify-center gap-4">
-                <a href="/trim">
+                <Link href="/trim">
                   <button className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg font-semibold transition shadow-[0_0_10px_#6366f1aa]">
                     Get Started
                   </button>
-                </a>
+                </Link>
                 <button
                   onClick={() => signOut()}
                   className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg font-semibold transition"
