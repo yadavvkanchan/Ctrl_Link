@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -16,18 +18,18 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">Quick Links</h3>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="/" className="hover:text-indigo-400 transition">Home</a></li>
-            <li><a href="/features" className="hover:text-indigo-400 transition">Features</a></li>
-            <li><a href="/pricing" className="hover:text-indigo-400 transition">Pricing</a></li>
-            <li><a href="/about" className="hover:text-indigo-400 transition">About</a></li>
-            <li><a href="/login" className="hover:text-indigo-400 transition">Login</a></li>
+            <li><Link href="/" className="hover:text-indigo-400 transition">Home</Link></li>
+            <li><Link href="/about" className="hover:text-indigo-400 transition">About</Link></li>
+            <li><Link href="/login" className="hover:text-indigo-400 transition">Login</Link></li>
           </ul>
         </div>
 
         {/* Column 3: Contact */}
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">Contact Us</h3>
-          <p className="text-gray-400">Email: <a href="mailto:support@ctrllink.com" className="hover:text-indigo-400">support@ctrllink.com</a></p>
+          <p className="text-gray-400">
+            Email: <a href="mailto:support@ctrllink.com" className="hover:text-indigo-400">support@ctrllink.com</a>
+          </p>
           <p className="text-gray-400 mt-2">Mumbai, India</p>
         </div>
       </div>
