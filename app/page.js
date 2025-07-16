@@ -9,7 +9,6 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white">
-
       {/* Glowing grid dots background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_rgba(255,255,255,0.05)_1px,_transparent_0)] bg-[length:20px_20px] opacity-10 animate-pulse z-0" />
 
@@ -29,7 +28,9 @@ export default function HomePage() {
                 <Image
                   src={session.user.image}
                   alt="Profile"
-                  className="w-16 h-16 rounded-full mx-auto mb-2"
+                  width={64}
+                  height={64}
+                  className="rounded-full mx-auto mb-2"
                 />
                 <h2 className="text-xl font-semibold">{session.user.name}</h2>
                 <p className="text-gray-400">{session.user.email}</p>
